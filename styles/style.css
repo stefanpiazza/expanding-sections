@@ -1,0 +1,97 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@media (orientation: landscape) {
+	.column {
+		position: absolute;
+		width: 25%;
+		height: 100%;
+
+		background-size: auto 100%;
+		background-position: center center;
+
+		background-color: #000000;
+	}
+
+	.column:nth-child(1) {
+		left: 0;
+		background-image: url('../img/landscape/f1.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.column:nth-child(2) {
+		left: 25%;
+		background-image: url('../img/landscape/f2.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.column:nth-child(3) {
+		left: 50%;
+		background-image: url('../img/landscape/f3.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.column:nth-child(4) {
+		left: 75%;
+		background-image: url('../img/landscape/f4.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.expand {
+		width: 100%;
+		left: 0!important;
+		z-index: 10;
+	}
+}
+
+@media (orientation: portrait) {
+	.column {
+		position: absolute;
+		width: 100%;
+		height: 25%;
+
+		background-size: 100% auto;
+		background-position: center center;
+
+		background-color: #000000;
+	}
+
+	.column:nth-child(1) {
+		top: 0;
+		background-image: url('../img/portrait/f1.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.column:nth-child(2) {
+		top: 25%;
+		background-image: url('../img/portrait/f2.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.column:nth-child(3) {
+		top: 50%;
+		background-image: url('../img/portrait/f3.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.column:nth-child(4) {
+		top: 75%;
+		background-image: url('../img/portrait/f4.jpg');
+		background-repeat: no-repeat;
+	}
+
+	.expand {
+		height: 100%;
+		top: 0!important;
+		z-index: 10;
+	}
+}
