@@ -11,6 +11,7 @@ function toggleWidth(column) {
     if (!column.expanded) {
         column.expanded = true;
         column.classList.add('expand');
+        column.style.zIndex = '10';
     }
 
     else {
@@ -23,6 +24,19 @@ function attachListeners(element) {
     element.addEventListener('webkitTransitionEnd', function () {
         element.style.webkitTransitionDuration = '';
         element.style.transitionDuration = '';
+
+        if (!element.expanded) {
+            element.style.zIndex = '';
+        }
+    });
+
+    element.addEventListener('transitionEnd', function () {
+        element.style.webkitTransitionDuration = '';
+        element.style.transitionDuration = '';
+
+        if (!element.expanded) {
+            element.style.zIndex = '';
+        }        
     });
 
     element.addEventListener('orientationchange', function () {
