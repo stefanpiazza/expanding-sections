@@ -30,7 +30,7 @@ function attachListeners(element) {
         }
     });
 
-    element.addEventListener('transitionEnd', function () {
+    element.addEventListener('transitionend', function () {
         element.style.webkitTransitionDuration = '';
         element.style.transitionDuration = '';
 
